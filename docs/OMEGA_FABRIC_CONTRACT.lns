@@ -1,0 +1,9 @@
+omega_fabric_contract {
+  root "VAIXLNS"
+  architecture ["VAIXLNS", "V", "VV", "VX", "XV"]
+  rule "no_silent_replacement" enforce "historical_artifacts_remain_addressable"
+  rule "authorization_before_execution" enforce "execution_requires_authorized_plan"
+  rule "failure_is_evidence" enforce "failed_state_is_immutable_and_replayable"
+  rule "proof_before_verified" enforce "verified_requires_runtime_evidence"
+  status "SPECIFIED"
+}
