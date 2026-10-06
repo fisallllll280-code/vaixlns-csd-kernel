@@ -11,7 +11,7 @@ def test_tokenizer_accepts_root_syntax():
     source = 'vaixlns_root { meta { id "VAIXLNS://ROOT/GENESIS/1.0" } }'
     tokens = tokenize(source)
     assert tokens[0].value == "vaixlns_root"
-    assert any(token.value == "VAIXLNS://ROOT/GENESIS/1.0" for token in tokens)
+    assert any(token.value == '"VAIXLNS://ROOT/GENESIS/1.0"' for token in tokens)
 
 
 def test_compile_root_fixture_deterministically():
